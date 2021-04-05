@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Storescoring</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class= "col-md-1">
+        <%= link_to toppages_index_path do %>
+        <%=image_tag 'toplogo.png', class: 'topbar-icon' %>
+        <% end %>
+      </div>
+      <div class= "col-md-offset-10 col-md-1">
+        <%= link_to 'Log out', "#", class: 'btn btn-block btn-black' %>
+    </header>
+    <main>
+      <div class="sidebar">
+        <ul>
+          <li><%= link_to 'skills', skills_index_path %></li>
+          <li><%= link_to 'stores', stores_index_path %></li>
+          <il><%= link_to 'profiles', profiles_index_path %></il>
+        </ul>
+      </div>
+      <div class="maincontent">
+          
+      </div>
+      <%= yield %>
+    </main>
+  </body>
+</html>
