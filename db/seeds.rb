@@ -18,3 +18,11 @@ end
 CSV.foreach('db/role.csv') do |row|
     Role.create(:name => row[0])
 end
+
+# CSV.foreach('db/skill.csv') do |row|
+#     Skill.create(:name => row[0], :sort => row[1])
+# end
+
+CSV.foreach('db/skill.csv') do |row|
+    SkillCategory.create(:name => row[0], :sort => row[1])
+end

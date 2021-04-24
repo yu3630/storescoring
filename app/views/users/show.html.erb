@@ -1,0 +1,19 @@
+<!--<div class= "area_info">-->
+<!--    <%#= @area.name %>-->
+<!--    <%#= @area.description %>-->
+<!--</div>-->
+<!--<div class= "store_contents">-->
+<!--    <%#= render '@stores', { area: @area, store: @store, } %>-->
+<!--</div>-->
+<div class= "top-hero-wrapper text-center">
+    <div class= "container top-hero-container">
+        <div class= "profiles-detail">
+            <p>社員番号: <%= current_user.number %></p>
+            <p>職制: <%= current_user.role.name %></p>
+            <p>エリア : <%= current_user.area.name %></p>
+            <p>店舗 : <%= current_user.store.name %></p>
+            <p>名前: <%= current_user.name %></p>
+            <p>パスワード変更はこちら: <%= link_to '変更', users_admin_index_path, class: 'text-black' %></p>
+        </div>
+    </div>
+</div>

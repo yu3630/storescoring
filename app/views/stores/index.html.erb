@@ -1,5 +1,11 @@
 <div class= "top-hero-wrapper text-center">
     <div class= "container top-hero-container">
-       stores
+        <div class= "row">
+            <div class= "stores-container">
+                <% @stores.each do |store| %>
+                <%= link_to store.name, store_path(store) %><br>
+                <% end %>
+            </div>
+        </div>
     </div>
 </div>

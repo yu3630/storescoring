@@ -11,27 +11,43 @@
   </head>
 
   <body>
+    <% if logged_in? %>
     <header class="topbar">
       <div class= "col-md-1">
         <%= link_to toppages_index_path do %>
-        <%=image_tag 'toplogo.png', class: 'topbar-icon' %>
+        <%= image_tag 'home.png', class: 'topbar-icon' %>
         <% end %>
       </div>
+      
       <div class= "col-md-offset-10 col-md-1">
-        <%= link_to 'Log out', "#", class: 'btn btn-block btn-black' %>
+       <%= link_to logout_path method: :delete do %>
+       <%= image_tag 'Logout.png', class: 'topbar-icon' %>
+       <% end %>
+      </div>
     </header>
     <main>
       <div class="sidebar">
         <ul>
-          <li><%= link_to 'skills', skills_index_path %></li>
+          <li><%= link_to 'skills', skill_categories_index_path %></li>
           <li><%= link_to 'stores', stores_index_path %></li>
-          <il><%= link_to 'profiles', profiles_index_path %></il>
+          <il><%= link_to 'profiles', users_show_path %></il>
         </ul>
       </div>
+    <% end %>  
       <div class="maincontent">
-          
       </div>
+      
+      <% flash.each do |key, value| %>
+      <div class= "alert alert-<%= key %>" role= "alert"><%= value %></div>
+      <% end %>
+      
       <%= yield %>
+      
+      <script>
+        $(function(){
+          $(".alert").fadeOut(5000);
+        });
+      </script>
     </main>
   </body>
 </html>
