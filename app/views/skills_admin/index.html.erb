@@ -1,0 +1,11 @@
+<div class= "top-hero-wrapper text-center">
+    <div class= "container top-hero-container">
+        <div class= "skills-admin-container">
+            <% @user.skills.each do |skill| %>
+            <p>スキル：<%= skill.name %></p>
+            <p>スキルポイント：<%= skill.point %></p>
+            <% end %>
+            <p>スキル登録はこちら: <%= link_to '登録', skills_user_index_path(user_id: params[:user_id]), class: 'text-black' %></p>
+        </div>
+    </div>
+</div>

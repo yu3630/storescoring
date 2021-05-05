@@ -1,4 +1,5 @@
 class SkillCategory < ApplicationRecord
-has_many :skill_user
+has_many :skills
+
 end
 

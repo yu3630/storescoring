@@ -1,8 +1,8 @@
 <div class= "top-hero-wrapper text-center">
-    <div class= "container top-hero-container">
-        <div class= "store-list">
-            <% @stores.each do |store| %>
-            <%= store.name %><br>
+    <div class= "container top-hero-store">
+        <div class= "stores-container">
+            <% @users.each do |user| %>
+            <%= link_to user.name,  skills_admin_index_path(user_id: user.id) %><br>
             <% end %>
         </div>
     </div>

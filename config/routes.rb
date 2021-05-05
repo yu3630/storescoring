@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'skills/new'
+  get 'skills_admin/index'
+  get 'skills_admin/new'
   get 'users_admin/index'
-  get 'uers_adimn/index'
   get 'aeras/show'
   get 'sessions/new'
   root 'pages#index'
@@ -14,6 +16,8 @@ Rails.application.routes.draw do
   get 'users/show'
   get 'users_admin/index'
   get '/logout', to: 'sessions#destroy'
+  get 'skills_user/index'
+  post '/skills_user', to: 'skills_user#create'
   
   resources :skill_categories
   get 'skill_categories/show'
@@ -29,7 +33,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
- 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,16 @@
+<div class= "top-hero-wrapper text-center">
+    <div class="skills-container">
+        <% SkillCategory.all.each do |category| %>
+        <p class= "skillCategory">カテゴリ名：<%= category.name %></p>
+        <div class= "skills-list-container">
+            <%= form_with model: @skill, url: skills_user_path, method: :post do |f| %>
+                <%= f.hidden_field :user_id, :value => params[:user_id] %>
+                スキル選択：<%= f.collection_select :skill_id, category.skills, :id, :name, :prompt => "選択して下さい" %>
+                <div class="skill-list-container">
+                    <%= f.submit "登録",  class: 'btn-block btn-black-skills' %>
+                </div>
+            <% end %>
+        <% end %>
+        <%= link_to 'ログイン', login_path, class: 'text-black' %>
+    </div>
+</div>

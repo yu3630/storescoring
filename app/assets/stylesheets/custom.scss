@@ -107,7 +107,8 @@ main{
     height: 500px;
 }
 .stores-container {
-    max-height: 90vh;
+    max-height: 80vh;
+    max-width: 30vw;
     overflow: scroll;
     font-size: 30px;
     text-align: left;
@@ -119,6 +120,9 @@ main{
     font-size: 30px;
     text-align: left;
     font-family: "筑紫A丸ゴシック";
+}
+.top-hero-store {
+    margin-left: 20px;
 }
 .skill_list {
     border: 3px solid #000;
@@ -139,4 +143,40 @@ main{
     font-size: 30px;
     font-family: "筑紫A丸ゴシック";
     text-align: left;  
+}
+.skills_admin-container {
+    font-size: 30px;
+    font-family: "筑紫A丸ゴシック";
+    text-align: left;    
+}
+.btn-black-skills {
+    color: #000;
+    border: 3px solid #000;
+    padding-top: 0px;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.0);
+    font-family: 'arial black';
+}
+.skills-container {
+    display: inline-block;  
+    font-size: 25px;
+    font-family: "筑紫A丸ゴシック";
+}
+.skill-list-container {
+    display: inline-block;  
+    font-family: "筑紫A丸ゴシック";
+}
+.text-custom {
+    font-size: 30px;
+    font-family: "筑紫A丸ゴシック";
+}
+.skillCategory {
+    font-size: 25px;
+    margin-top: 20px;
+    background-color: #e2d085;
+}
+.skill-category-index {
+    font-size: 30px;
+    text-align: left;    
+    font-family: "筑紫A丸ゴシック";
 }

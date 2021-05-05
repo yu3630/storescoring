@@ -1,7 +1,7 @@
 <div class= "top-hero-wrapper text-center">
     <div class= "container top-hero-container">
-        <div class= "skills-container">
-            <% @skills.each do |skillcategory| %>
+        <div class= "skill-category-index">
+            <% @skill_category.each do |skillcategory| %>
             <%= link_to skillcategory.name, skill_category_path(skillcategory) %><br>
             <% end %>
         </div>

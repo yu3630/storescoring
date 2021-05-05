@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  skill_category_id: 1
   name: MyString
-  sort: 1
+  point: 1
 
 two:
+  skill_category_id: 1
   name: MyString
-  sort: 1
+  point: 1

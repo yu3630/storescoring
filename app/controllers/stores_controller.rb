@@ -4,6 +4,6 @@ class StoresController < ApplicationController
   end
   
   def show
-    @stores = User.where(store_id: params[:id])
+    @users = Store.find(params[:id]).users
   end
 end

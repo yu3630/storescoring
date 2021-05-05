@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_24_015519) do
+ActiveRecord::Schema.define(version: 2021_05_03_111118) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -30,11 +30,19 @@ ActiveRecord::Schema.define(version: 2021_04_24_015519) do
     t.integer "sort"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "skill_name"
   end
 
   create_table "skill_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "skill_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "skill_category_id"
+    t.string "name"
     t.integer "point"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -44,14 +52,6 @@ ActiveRecord::Schema.define(version: 2021_04_24_015519) do
     t.string "name"
     t.integer "area_id"
     t.integer "sort"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "user_skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "skill_id"
-    t.string "point"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
