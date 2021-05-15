@@ -9,9 +9,10 @@ class User < ApplicationRecord
     
     has_secure_password
     
-    has_many :skill_users#foreign_key: 'skill_id'
+    has_many :skill_users
     has_many :skills, through: :skill_users
     belongs_to :area
     belongs_to :store
     belongs_to :role
+
 end

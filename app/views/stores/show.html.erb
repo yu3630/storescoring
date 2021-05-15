@@ -1,9 +1,27 @@
 <div class= "top-hero-wrapper text-center">
     <div class= "container top-hero-store">
+        <!--サーチ実装予定-->
+        <!--<nav class="navbar navbar-light bg-light">-->
+        <!--    <form class="form-inline">-->
+        <!--        <input class="form-control mr-sm-2" type="text" placeholder="Search">-->
+        <!--        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+        <!--      </form>-->
+        <!--</nav>-->
         <div class= "stores-container">
-            <% @users.each do |user| %>
-            <%= link_to user.name,  skills_admin_index_path(user_id: user.id) %><br>
-            <% end %>
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                  <th>スタッフ一覧</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% @users.each do |user| %>
+                    <tr>
+                        <td><%= link_to user.name,  skills_admin_index_path(user_id: user.id) %></td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

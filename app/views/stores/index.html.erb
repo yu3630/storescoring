@@ -1,11 +1,24 @@
-<div class= "top-hero-wrapper">
-    <div class= "container top-hero-store">
+<div class= "top-hero-wrapper text-center">
+    <div class= "container top-hero-container">
         <div class= "row">
-            <div class= "stores-container">
-                <% @stores.each do |store| %>
-                <%= link_to store.name, store_path(store) %><br>
-                <% end %>
+            <div class="stores-container">
+                <table class="stores-index">
+                    <thead>
+                        <tr>
+                            <th>SCORE</th>
+                            <td>STORE</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @stores.each do |store| %>
+                        <tr>
+                            <th><%= store.skillAverage %></th>
+                            <td><%= link_to store.name, store_path(store) %></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
             </div>
-        </div>
+        </div>    
     </div>
 </div>

@@ -8,12 +8,32 @@
 <div class= "top-hero-wrapper text-center">
     <div class= "container top-hero-container">
         <div class= "profiles-detail">
-            <p>社員番号: <%= current_user.number %></p>
-            <p>職制: <%= current_user.role.name %></p>
-            <p>エリア : <%= current_user.area.name %></p>
-            <p>店舗 : <%= current_user.store.name %></p>
-            <p>名前: <%= current_user.name %></p>
-            <p>パスワード変更はこちら: <%= link_to '変更', users_admin_index_path, class: 'text-black' %></p>
+            <table>
+            <tr>
+                <th>社員番号</th>
+                <td><%= current_user.number %></td>
+            </tr>
+            <tr>
+                <th>職制</th>
+                <td><%= current_user.role.name %></td>
+            </tr>
+            <tr>
+                <th>エリア</th>
+                <td><%= current_user.area.name %></td>
+            </tr>
+            <tr>
+                <th>店舗</th>
+                <td><%= current_user.store.name %></td>
+            </tr>
+            <tr>
+                <th>名前</th>
+                <td><%= current_user.name %></td>
+            </tr>
+            <tr>
+                <th>パスワード変更</th>
+                <td><%= link_to '管理者へお問い合わせ', users_admin_index_path, class: 'text-black' %></td>
+            </tr>
+            </table>
         </div>
     </div>
 </div>

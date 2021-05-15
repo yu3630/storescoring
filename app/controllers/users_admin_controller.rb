@@ -4,7 +4,7 @@ class UsersAdminController < ApplicationController
   
   def require_permission
     unless current_user && current_user.role_id == 5
-      redirect_to profiles_index_path, alert: 'パスワード変更の際は管理者へお問い合わせください！'
+      redirect_to users_show_path, alert: 'パスワード変更の際は管理者へお問い合わせください！'
     end
   end
   

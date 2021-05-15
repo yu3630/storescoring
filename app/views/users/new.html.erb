@@ -30,9 +30,10 @@
                 </div> 
                 <%#= render 'store', { store: @store } %>
                 <%= f.submit "登録", class: 'btn-block btn-black' %>
-
                 <% end %>
-                <%= link_to 'ログイン', login_path, class: 'text-black' %>
+                <%= link_to login_path do %>
+                <button type="button" class="btn btn-info btn-info">ログイン</button>
+                <% end %>
             </div>
         </div>
     </div>

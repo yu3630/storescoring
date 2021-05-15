@@ -17,11 +17,26 @@ class UsersController < ApplicationController
   def show
   end
   
-  def edit
-    # @user = User.find(params[:id])
-  end
-  
-  def update
+  before_action :require_permission, only: [:edit, :update]
+  def require_permission
+    unless current_user && current_user.role_id == 5
+      redirect_to stores_index_path, alert: '権限が必要になります'
+    end
+    
+    def edit
+      @user = User.find(params[:user_id])
+    end
+    
+    def update
+      @user = User.find(params[:id])
+      if @user.update(user_params)
+        flash[:success] = 'ユーザー情報を編集しました。'
+        redirect_to stores_index_path
+      else
+        flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
+        render :edit 
+      end   
+    end
   end
   
   def ajax

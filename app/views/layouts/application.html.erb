@@ -13,29 +13,39 @@
   <body>
     <% if logged_in? %>
     <header class="topbar">
-      <div class= "col-md-1">
-        <%= link_to toppages_index_path do %>
-        <%= image_tag 'home.png', class: 'topbar-icon' %>
-        <% end %>
-      </div>
-      
-      <div class= "col-md-offset-10 col-md-1">
-       <%= link_to logout_path method: :delete do %>
-       <%= image_tag 'Logout.png', class: 'topbar-icon' %>
-       <% end %>
+      <div class= "row">
+        <div class= "col-md-1">
+          <%= link_to toppages_index_path do %>
+          <%= image_tag 'home.png', class: 'topbar-icon' %>
+          <% end %>
+        </div>
+        <div class= "col-md-8">
+        </div>
+        <div class= "col-md-2">
+          <%= link_to users_new_path do %>
+          <button type="button" class="btn btn-success btn-success">New User</button>
+          <% end %>
+        </div>  
+        <div class= "col-md-1">
+          <%= link_to logout_path method: :delete do %>
+          <%= image_tag 'Logout.png', class: 'topbar-icon' %>
+          <% end %>
+        </div>
       </div>
     </header>
     <main>
       <div class="sidebar">
         <ul>
-          <li><%= link_to 'skills', skill_categories_index_path %></li>
-          <li><%= link_to 'stores', stores_index_path %></li>
-          <il><%= link_to 'profiles', users_show_path %></il>
+          <li><%= image_tag "Skill.png" %> <%= link_to 'Skills', skill_categories_index_path %></li>
+          <li><%= image_tag "Store.png" %> <%= link_to 'Stores', stores_index_path %></li>
+          <il><%= image_tag "Profile.png" %> <%= link_to 'Profiles', users_show_path %></il>
         </ul>
       </div>
     <% end %>  
       <div class="maincontent">
       </div>
+      
+      
       
       <% flash.each do |key, value| %>
       <div class= "alert alert-<%= key %>" role= "alert"><%= value %></div>

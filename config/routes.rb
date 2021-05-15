@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'skills_admin/index'
   get 'skills_admin/new'
   get 'users_admin/index'
-  get 'aeras/show'
+  get 'aeras/index'
   get 'sessions/new'
   root 'pages#index'
   get 'pages/index'
@@ -14,10 +14,17 @@ Rails.application.routes.draw do
   get 'profiles/index'
   get 'users/new'
   get 'users/show'
+  get 'users/edit'
+  patch 'user/update'
+  put 'user/update'
   get 'users_admin/index'
   get '/logout', to: 'sessions#destroy'
-  get 'skills_user/index'
+ 
+  get 'skills_user/new'
+  get 'skills_user/edit'
   post '/skills_user', to: 'skills_user#create'
+  
+  get 'search' => 'stores#seach' #サーチ実装
   
   resources :skill_categories
   get 'skill_categories/show'

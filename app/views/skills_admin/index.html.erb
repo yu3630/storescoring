@@ -2,10 +2,12 @@
     <div class= "container top-hero-container">
         <div class= "skills-admin-container">
             <% @user.skills.each do |skill| %>
+            <p>スキルカテゴリー：<%= skill.skill_category_id %></p>
             <p>スキル：<%= skill.name %></p>
             <p>スキルポイント：<%= skill.point %></p>
             <% end %>
-            <p>スキル登録はこちら: <%= link_to '登録', skills_user_index_path(user_id: params[:user_id]), class: 'text-black' %></p>
+            <p>スキル登録はこちら: <%= link_to '登録', skills_user_new_path(user_id: params[:user_id]), class: 'text-black' %></p>
+            <p>パスワード変更はこちら: <%= link_to '変更', users_edit_path(user_id: params[:user_id]), class: 'text-black' %></p>
         </div>
     </div>
 </div>
