@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root 'pages#index'
   get 'pages/index'
-  get 'toppages/index'
-  get 'toppages/show'
   get 'skill_categories/index'
   get 'stores/index'
   get 'profiles/index'

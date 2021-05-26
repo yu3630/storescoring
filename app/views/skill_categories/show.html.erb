@@ -1,7 +1,20 @@
 <div class= "top-hero-wrapper text-center">
     <div class= "container top-hero-container">
-        <div class= "skill-category-show">
-            <%= @skill_category_id %>
-        </div>
+        <table class= "skill-category-show">
+            <thead>
+                <tr>
+                    <th>スキル名</th>
+                    <td>スキルポイント</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% @skill_category.skills.each do |skill| %>
+                <tr>
+                    <th><%=skill.name %></th>
+                    <td> <%=skill.point %></td>
+                </tr>
+                    <% end %>
+            </tbody>
+        </table>
     </div>
 </div>

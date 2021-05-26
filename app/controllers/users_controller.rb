@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
-  
   def new
     @user = User.new
+    if current_user.role_id != 2 && current_user.role_id != 5
+      flash[:danger] = '権限が必要です'
+      redirect_to users_show_path
+    end
   end
   
   def create
@@ -20,7 +23,8 @@ class UsersController < ApplicationController
   before_action :require_permission, only: [:edit, :update]
   def require_permission
     unless current_user && current_user.role_id == 5
-      redirect_to stores_index_path, alert: '権限が必要になります'
+      flash[:danger] = '権限が必要です'
+      redirect_to stores_index_path
     end
     
     def edit

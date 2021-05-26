@@ -1,11 +1,14 @@
 <div class= "top-hero-wrapper text-center">
     <div class= "container top-hero-container">
         <div class= "users-admin-container">
-        <%= @users.each do |user| %>
-        <li>
-            <%= link_to user.name %>
-        </li>
-        <% end %>
+            <p><お問い合わせ先></p>
+            <h1>下記内容をXXXX @XXXX.co.jpに送信</h1>
+            <li>社員番号:◯◯◯◯</li>
+            <li>エリア名:◯◯◯◯</li>
+            <li>店舗名:◯◯◯◯</li>
+            <li>名前:◯◯◯◯</li>
+            <li>変更したいパスワード:◯◯◯◯
+            <h1>※半角8〜15文字で英大文字・小文字・数字それぞれ１文字以上含む</h1>
         </div>
     </div>
 </div>

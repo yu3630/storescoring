@@ -2,7 +2,8 @@ class SkillsUserController < ApplicationController
     before_action :require_permission
     def require_permission
         unless current_user && current_user.role_id == 2
-            redirect_to stores_index_path, alert: '権限が必要になります'
+            flash[:danger] = '権限が必要です'
+            redirect_to stores_index_path
         end
     end
     

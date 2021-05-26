@@ -11,12 +11,14 @@
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
-                  <th>スタッフ一覧</th>
+                    <th>職制</th>
+                    <td>スタッフ名</td>
                 </tr>
                 </thead>
                 <tbody>
                     <% @users.each do |user| %>
                     <tr>
+                        <td><%= user.role.name %></td>
                         <td><%= link_to user.name,  skills_admin_index_path(user_id: user.id) %></td>
                     </tr>
                     <% end %>

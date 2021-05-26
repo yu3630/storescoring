@@ -6,6 +6,7 @@
                     <thead>
                         <tr>
                             <th>SCORE</th>
+                            <td>AREA</td>
                             <td>STORE</td>
                         </tr>
                     </thead>
@@ -13,6 +14,7 @@
                         <% @stores.each do |store| %>
                         <tr>
                             <th><%= store.skillAverage %></th>
+                            <td><%= store.area.name %></td>
                             <td><%= link_to store.name, store_path(store) %></td>
                         </tr>
                         <% end %>

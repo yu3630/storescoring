@@ -12,27 +12,25 @@
 
   <body>
     <% if logged_in? %>
-    <header class="topbar">
-      <div class= "row">
-        <div class= "col-md-1">
-          <%= link_to toppages_index_path do %>
-          <%= image_tag 'home.png', class: 'topbar-icon' %>
-          <% end %>
-        </div>
-        <div class= "col-md-8">
-        </div>
-        <div class= "col-md-2">
-          <%= link_to users_new_path do %>
-          <button type="button" class="btn btn-success btn-success">New User</button>
-          <% end %>
-        </div>  
-        <div class= "col-md-1">
-          <%= link_to logout_path method: :delete do %>
-          <%= image_tag 'Logout.png', class: 'topbar-icon' %>
-          <% end %>
-        </div>
+    <nav class="navbar navbar-top navbar-transparent">
+      <div class="topbar">
+        <%= link_to users_show_path do %>
+          <span><%= image_tag 'home.png', class: 'icon' %></span>
+        <% end %>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to users_new_path do %>
+                <button type="button" class="btn btn-success topbar-icon">New User</button>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to logout_path method: :delete do %>
+                <%= image_tag 'Logout.png', class: 'topbar-icon' %>
+              <% end %>
+            </li>
+        </ul>
       </div>
-    </header>
+    </nav>
     <main>
       <div class="sidebar">
         <ul>
@@ -44,15 +42,11 @@
     <% end %>  
       <div class="maincontent">
       </div>
-      
-      
-      
-      <% flash.each do |key, value| %>
+     <% flash.each do |key, value| %>
       <div class= "alert alert-<%= key %>" role= "alert"><%= value %></div>
-      <% end %>
-      
+    <% end %>
       <%= yield %>
-      
+
       <script>
         $(function(){
           $(".alert").fadeOut(5000);

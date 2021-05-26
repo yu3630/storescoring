@@ -19,11 +19,11 @@
             </tr>
             <tr>
                 <th>エリア</th>
-                <td><%= current_user.area.name %></td>
+                <td><%= current_user.area ? current_user.area.name : "#" %></td>
             </tr>
             <tr>
                 <th>店舗</th>
-                <td><%= current_user.store.name %></td>
+                <td><%= current_user.store ? current_user.store.name : "#" %></td>
             </tr>
             <tr>
                 <th>名前</th>
