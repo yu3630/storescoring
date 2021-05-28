@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'skill_categories/index'
   get 'stores/index'
-  get 'profiles/index'
   get 'users/new'
   get 'users/show'
   get 'users/edit'

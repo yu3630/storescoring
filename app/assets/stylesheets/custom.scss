@@ -1,239 +1,254 @@
+html,body,main {
+    font-family: "筑紫A丸ゴシック";
+}
 a {
     color: #000;
 }
+
 h1 {
     font-size: 30px;
 }
+
 main{
-    min-height: 90vh;
-    display: flex;
-    margin-top: 10px;
-    font-size: 2rem;
+    min-height : 90vh;
+    display    : flex;
+    margin-top : 10px;
+    font-size  : 2rem;
 }
+
 .maincontent{
-    flex: 1;
-    text-align: center;
-    margin-left: 10px;
+    flex        : 1;
+    text-align  : center;
+    margin-left : 10px;
 }
+
 body{
-    display: flex;
-    flex-direction: column;
-    background: image-url("topbar.png");
-    overflow-x : hidden;
-    overflow-y : auto;
+    display        : flex;
+    flex-direction : column;
+    background     : image-url("topbar.png");
+    overflow-x     : hidden;
+    overflow-y     : auto;
 }
+
 .topbar{
-    height: 70px;
-    background-color: #a3c5c7;
-    color: #fff;
-    line-height: 20px;
+    height           : 70px;
+    background-color : #a3c5c7;
+    color            : #fff;
+    line-height      : 20px;
 }
+
 .navbar-transparent {
     height: 10px;
     .navbar-brand {
-        padding: 0px;
-        margin-top: 0px;
+        padding    : 0px;
+        margin-top : 0px;
     }
 }
+
 .icon {
-    max-width: 100%;
-    height: 60px;
+    max-width : 100%;
+    height    : 60px;
 }
 
-
 .sidebar{
-    text-align: center;
-    background-color: #a3c5c7;
-    color: #fff;
-    color: #fff;
+    text-align       : center;
+    background-color : #a3c5c7;
+    color            : #fff;
     ul {
-     list-style: none;
-     width: 220px;
-     padding: 0;
-     margin-top: 300px;
-     line-height: 100px;
-     font-size: 40px;
-     font-family: '筑紫A丸ゴシック';
-     font-weight: bold;
+        list-style   : none;
+        width        : 220px;
+        padding      : 0;
+        margin-top   : 300px;
+        line-height  : 100px;
+        font-size    : 40px;
+        font-weight  : bold;
     }
     a {
     color: #000;
     }
 }
+
 .topbar-icon {
-    max-width: 100%;
-    height: 60px;
-    margin-top: -10px;
+    max-width  : 100%;
+    height     : 60px;
+    margin-top : -10px;
 }
 
 .form-control{
     font-size: 20px;
 }
+
 .text-black {
     color: #000;
 }
+
 .btn-black {
-    color: #000;
-    border: 3px solid #000;
-    padding-top: 0px;
-    font-size: 30px;
-    background-color: rgba(0,0,0,0.0);
-     font-family: 'arial black';
+    color            : #000;
+    border           : 3px solid #000;
+    padding-top      : 0px;
+    font-size        : 30px;
+    background-color : rgba(0,0,0,0.0);
+     font-family     : 'arial black';
 }
+
 .top-hero-wrapper {
-    width: 100%;
-    // height: 100vh;
-    background-image: url('#');
-    background-position: center center;
-    background-size: cover;
-    background-color: #d5cdc8;
+    width               : 100%;
+    background-image    : url('#');
+    background-position : center center;
+    background-size     : cover;
+    background-color    : #d5cdc8;
 }
+
 .top-hero-container {
     padding-top: 10px;
     h1 {
         margin-bottom: 20px;
     }
     h2 {
-        font-size: 80px;
-        font-family: 'arial black';
-        margin-bottom: 20px;
+        font-size     : 80px;
+        font-family   : 'arial black';
+        margin-bottom : 20px;
     }
     .skill-admin-subcontainer {
         font-size: 30px;
-        font-family: "筑紫A丸ゴシック";
         .text-skill {
-            font-weight: bold;
-            font-size: 120%;
+            font-weight : bold;
+            font-size   : 120%;
             a {
             color:  #03A9F4;
             }
         }
         .text-password {
-            font-weight: bold;
-            font-size: 120%;
+            font-weight : bold;
+            font-size   : 120%;
             a {
             color: #00b359;
             }
         }
     }
 }
+
 .users-new-login {
-    width: 100%;
-    height: 100vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #d5cdc8;
+    width                 : 100%;
+    height                : 100vh;
+    background-position   : center center;
+    background-repeat     : no-repeat;
+    background-attachment : fixed;
+    background-size       : cover;
+    background-color      : #d5cdc8;
     
 }   
+
 .users-new-wrapper {
-    width: 100%;
-    // height: 100vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #d5cdc8;
+    width                 : 100%;
+    background-position   : center center;
+    background-repeat     : no-repeat;
+    background-attachment : fixed;
+    background-size       : cover;
+    background-color      : #d5cdc8;
 }
+
 .users-new-container {
-    padding-top: 10px;
-    font-size: 25px;
-    font-family: "筑紫A丸ゴシック";
-    font-weight: bold;
+    padding-top : 10px;
+    font-size   : 25px;
+    font-weight : bold;
     h1 {
-        font-size: 40px;
-        font-family: "筑紫A丸ゴシック";
-        font-weight: bold;
-        text-align: center;
+        font-size   : 40px;
+        font-family : "筑紫A丸ゴシック";
+        font-weight : bold;
+        text-align  : center;
     }
 }
+
 .form-group {
     margin-bottom: 20px;
 }
+
 .btn-black {
-    width : 60%;
-    display       : inline-block;
-    font-size     : 20pt;        /* 文字サイズ */
-    text-align    : center;      /* 文字位置   */
-    cursor        : pointer;     /* カーソル   */
-    padding       : 12px 100px;   /* 余白       */
-    background    : rgba(0, 127, 255, 0.98);     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    line-height   : 1em;         /* 1行の高さ  */
-    transition    : .3s;         /* なめらか変化 */
-    box-shadow    : 2px 2px 2px #666666;  /* 影の設定 */
-    border        : 2px solid rgba(0, 127, 255, 0.98);    /* 枠の指定 */
+    width       : 60%;
+    display     : inline-block;
+    font-size   : 20pt;        /* 文字サイズ */
+    text-align  : center;      /* 文字位置   */
+    cursor      : pointer;     /* カーソル   */
+    padding     : 12px 100px;   /* 余白       */
+    background  : rgba(0, 127, 255, 0.98);     /* 背景色     */
+    color       : #ffffff;     /* 文字色     */
+    line-height : 1em;         /* 1行の高さ  */
+    transition  : .3s;         /* なめらか変化 */
+    box-shadow  : 2px 2px 2px #666666;  /* 影の設定 */
+    border      : 2px solid rgba(0, 127, 255, 0.98);    /* 枠の指定 */
 }
+
 .btn-block:hover {
-    box-shadow    : none;        /* カーソル時の影消去 */
-    color         : rgba(0, 127, 255, 0.98);     /* 背景色     */
-    background    : #ffffff;     /* 文字色     */
+    box-shadow : none;        /* カーソル時の影消去 */
+    color      : rgba(0, 127, 255, 0.98);     /* 背景色     */
+    background : #ffffff;     /* 文字色     */
 }
+
 .btn-info {
-    font-size: 20px;
-    font-family: "筑紫A丸ゴシック";
-    font-weight: bold;
-    margin-top: 5px;
-    width: 100px;
-    height: 60px;
+    font-size   : 20px;
+    font-weight : bold;
+    margin-top  : 5px;
+    width       : 100px;
+    height      : 60px;
 }
+
 .form-control-new {
     font-size: 10px;
 } 
+
 .alert {
-    margin-bottom: 0px;
-    font-family: "筑紫A丸ゴシック";
-    position: fixed;
-    width: 100%;
-    z-index: 10000;
+    margin-bottom : 0px;
+    position      : fixed;
+    width         : 100%;
+    z-index       : 10000;
 }
+
 .toppages-index-container {
-    margin-bottom: 100px;
-    height: 300px;
+    margin-bottom : 100px;
+    height        : 300px;
 }
+
 .toppages-index-subcontainer {
     height: 500px;
 }
+
 .stores-container {
-    max-height: 80vh;
-    max-width: 80vw;
-    overflow: scroll;
-    font-size: 30px;
-    text-align: left;
-    border-width: thick;
-    border-style: double;
-    font-family: "筑紫A丸ゴシック";
+    max-height   : 80vh;
+    max-width    : 80vw;
+    overflow     : scroll;
+    font-size    : 30px;
+    text-align   : left;
+    border-width : thick;
+    border-style : double;
 }
 .skills-container {
-    // font-size: 30px;
-    text-align: left;
-    font-family: "筑紫A丸ゴシック";
-    display: inline-block;  
+    text-align : left;
+    display    : inline-block;  
 }
+
 .top-hero-store {
     margin-left: 20px;
 }
+
 .skill_list {
     border: 3px solid #000;
-    font-family: "筑紫A丸ゴシック";
 }
+
 .store-list {
-    max-height: 90vh;
-    font-size: 30px;
-    font-family: "筑紫A丸ゴシック";
-    text-align: left;
+    max-height : 90vh;
+    font-size  : 30px;
+    text-align : left;
 }
 
 .profiles-detail {
-    font-size: 30px;
-    font-family: "筑紫A丸ゴシック";
-    text-align: left;
+    font-size  : 30px;
+    text-align : left;
 }
+
 table{
-  width: 100%;
-  border-collapse: collapse;
-  font-family: "筑紫A丸ゴシック";
+  width           : 100%;
+  border-collapse : collapse;
 }
 
 table tr{
@@ -246,152 +261,165 @@ table tr:last-child{
 
 table th{
   position: relative;
-  text-align: left;
-  width: 30%;
-  background-color: #3a687e;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+  text-align       : left;
+  width            : 30%;
+  background-color : #3a687e;
+  color            : white;
+  text-align       : center;
+  padding          : 10px 0;
 }
 
 table th:after{
-  display: block;
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  top:calc(50% - 10px);
-  right:-10px;
-  border-left: 10px solid #3a687e;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  display       : block;
+  content       : "";
+  width         : 0px;
+  height        : 0px;
+  position      : absolute;
+  top           :calc(50% - 10px);
+  right         :-10px;
+  border-left   : 10px solid #3a687e;
+  border-top    : 10px solid transparent;
+  border-bottom : 10px solid transparent;
 }
 
 table td{
-  text-align: left;
-  width: 40%;
-  text-align: center;
-  background-color: #E6EFEF;
-  padding: 10px 0;
+  text-align       : left;
+  width            : 40%;
+  text-align       : center;
+  background-color : #E6EFEF;
+  padding          : 10px 0;
 }
 
 .users-admin-container {
-    font-size: 30px;
-    font-family: "筑紫A丸ゴシック";
-    text-align: left;  
+    font-size  : 30px;
+    text-align : left;  
 }
+
 .skills-admin-container {
-    font-size: 30px;
-    font-family: "筑紫A丸ゴシック";
-    text-align: left;
-    overflow: scroll;
-    max-height: 80vh;
-    max-width: 80vw;
-    border-width: 4px;
-    border-style: double;
-    margin-top: 5px;
+    font-size    : 30px;
+    text-align   : left;
+    overflow     : scroll;
+    max-height   : 80vh;
+    max-width    : 80vw;
+    border-width : 4px;
+    border-style : double;
+    margin-top   : 5px;
     
 }
+
 .btn-black-skills {
-    color: #000;
-    border: 3px solid #000;
-    padding-top: 0px;
-    font-size: 20px;
-    background-color: rgba(0,0,0,0.0);
-    font-family: 'arial black';
+    color            : #000;
+    border           : 3px solid #000;
+    padding-top      : 0px;
+    font-size        : 20px;
+    background-color : rgba(0,0,0,0.0);
+    font-family      : 'arial black';
 }
 
 .skill-list-container {
     display: inline-block;  
-    font-family: "筑紫A丸ゴシック";
 }
+
 .text-custom {
     font-size: 30px;
-    font-family: "筑紫A丸ゴシック";
 }
+
 .skillCategory {
-    font-size: 20px;
-    margin-top: 20px;
-    background-color: #e2d085;
+    font-size        : 20px;
+    margin-top       : 20px;
+    background-color : #e2d085;
 }
+
 .skill-category-index {
-    font-size: 30px;
-    text-align: left;    
-    font-family: "筑紫A丸ゴシック";
+    font-size  : 30px;
+    text-align : left;    
 }
+
 .skill-category-show {
-    font-size: 30px;
-    font-family: "筑紫A丸ゴシック";
-    position: left;
+    font-size : 30px;
+    position  : left;
 }
 
 .skill-category-name {
-    font-weight: bold;
-    border-bottom: solid;
+    font-weight   : bold;
+    border-bottom : solid;
    
 }
+
 .skill-th {
-  position: relative;
-  text-align: left;
-  background-color: #3a687e;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 30px;
-  font-family: "筑紫A丸ゴシック";
-}
+  position         : relative;
+  text-align       : left;
+  background-color : #3a687e;
+  color            : white;
+  text-align       : center;
+  padding          : 10px 0;
+  font-size        : 30px;
+ }
+
 .top-hero-toppages {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('#');
-    background-position: center center;
-    background-size: cover;
+    width               : 100vw;
+    background-position : center center;
+    background-size     : cover;
 }
+
 .toppages {
-    background: image-url("top.png")
+    background: image-url("top.png");
+    min-height: 100vh;
 }
+
 .top-hero-toppages-index {
-    padding-top: 100px;
+    padding      : 100px, 24px, 150px;
+    margin-top   : 30px;
+    border-style: outset;
+    border-width : 10px;
+    margin-left  : 40px;
+    margin-right : 40px;
+    width        : 95vw;
+    border-color : #FFFFFF;
+    background: linear-gradient(#7FB7BE, #D3F3EE );
     h1 {
         margin-bottom: 20px;
     }
     h2 {
-        font-size: 80px;
-        font-family: 'arial black';
-        margin-bottom: 20px;
+        font-size     : 80px;
+        font-family   : 'arial black';
+        margin-bottom : 20px;
+    }
+    .row {
+        margin-bottom: 30px;
     }
     .top-page-icon {
-    max-width: 100%;
-    max-height: 600px;
+    max-width  : 100%;
+    max-height : 550px;
     }
     p {
-        font-family: "筑紫A丸ゴシック";
-    	font-size:10em;
-    	text-align:center;
-    	line-height:0.95em;
-    	font-weight:bold;
-    	color: #03A9F4;
-    	text-shadow: 
+        font-size   : 60px;
+    	text-align  : center;
+    	line-height : 0.95em;
+    	font-weight : bold;
+    	color       : #03A9F4;
+    	margin-bottom  : 100px;
+    	text-shadow : 
 		0.04em 0.02em 0 #B0BEC5, 
 		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
     }
     .btn-black {
-        width : 60%;
-        display       : inline-block;
-        font-size     : 20pt;        /* 文字サイズ */
-        text-align    : center;      /* 文字位置   */
-        cursor        : pointer;     /* カーソル   */
-        padding       : 12px 100px;   /* 余白       */
-        background    : rgba(0, 127, 255, 0.98);     /* 背景色     */
-        color         : #ffffff;     /* 文字色     */
-        line-height   : 1em;         /* 1行の高さ  */
-        transition    : .3s;         /* なめらか変化 */
-        box-shadow    : 2px 2px 2px #666666;  /* 影の設定 */
-        border        : 2px solid rgba(0, 127, 255, 0.98);    /* 枠の指定 */
+        width       : 40%;
+        display     : inline-block;
+        font-size   : 20pt;        /* 文字サイズ */
+        text-align  : center;      /* 文字位置   */
+        cursor      : pointer;     /* カーソル   */
+        padding     : 12px 100px;   /* 余白       */
+        background  : rgba(0, 127, 255, 0.98);     /* 背景色     */
+        color       : #ffffff;     /* 文字色     */
+        line-height : 1em;         /* 1行の高さ  */
+        transition  : .3s;         /* なめらか変化 */
+        box-shadow  : 2px 2px 2px #666666;  /* 影の設定 */
+        border      : 2px solid rgba(0, 127, 255, 0.98);    /* 枠の指定 */
         }
         .btn-block:hover {
-            box-shadow    : none;        /* カーソル時の影消去 */
-            color         : rgba(0, 127, 255, 0.98);     /* 背景色     */
-            background    : #ffffff;     /* 文字色     */
-        }
+            box-shadow : none;        /* カーソル時の影消去 */
+            color      : rgba(0, 127, 255, 0.98);     /* 背景色     */
+            background : #ffffff;     /* 文字色     */
+    }
 }
