@@ -24,7 +24,7 @@ CSV.foreach('db/skill.csv') do |row|
 end
 
 CSV.foreach('db/skillcategory.csv') do |row|
-    SkillCategory.create!(:name => row[0], :sort => row[1], :skill_name => row[2])
+    SkillCategory.create(:name => row[0], :sort => row[1], :skill_name => row[2])
 end
 
 CSV.foreach('db/user.csv') do |row|
