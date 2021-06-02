@@ -3,7 +3,7 @@ class StoresController < ApplicationController
     @storeHash = {}
     @stores = Store.all
   end
-  
+
   def show
     @store = Store.find(params[:id])
     @users = @store.users.order('role_id desc')
@@ -12,11 +12,10 @@ class StoresController < ApplicationController
         flash[:danger] = '権限が必要です'
         redirect_to stores_index_path
       end
-    else if current_user.role_id == 2
-        if current_user.store != @store
-          flash[:danger] = '権限が必要です'
-          redirect_to stores_index_path
-        end
+    elsif current_user.role_id == 2 
+      if current_user.store != @store
+        flash[:danger] = '権限が必要です'
+        redirect_to stores_index_path
       end
     end
   end

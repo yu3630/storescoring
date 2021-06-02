@@ -6,7 +6,7 @@ class UsersController < ApplicationController
       redirect_to users_show_path
     end
   end
-  
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -16,21 +16,20 @@ class UsersController < ApplicationController
       render :new
     end
   end
-  
-  def show
-  end
-  
-  before_action :require_permission, only: [:edit, :update]
+
+  def show; end
+
+  before_action :require_permission, only: %i[edit update]
   def require_permission
     unless current_user && current_user.role_id == 5
       flash[:danger] = '権限が必要です'
       redirect_to stores_index_path
     end
-    
+
     def edit
       @user = User.find(params[:user_id])
     end
-    
+
     def update
       @user = User.find(params[:id])
       if @user.update(user_params)
@@ -38,17 +37,18 @@ class UsersController < ApplicationController
         redirect_to stores_index_path
       else
         flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
-        render :edit 
-      end   
+        render :edit
+      end
     end
   end
-  
+
   def ajax
     @area = Area.find(params[:id])
     @store = @area.stores
   end
-  
+
   private
+
   def user_params
     params.require(:user).permit(:number, :password, :name, :role_id, :area_id, :store_id, :password_confirmation)
   end

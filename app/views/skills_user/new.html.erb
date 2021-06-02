@@ -3,7 +3,7 @@
         <% SkillCategory.all.each do |category| %>
         <p class= "skillCategory">カテゴリ名：<%= category.name %></p>
          <div class= "skills-list-container">
-            <%= form_with model: @skill, url: skills_user_path, method: :post do |f| %>
+            <%= form_with model: @skill, url: skills_user_path, method: :post, remote: true do |f| %>
                 <%= f.hidden_field :user_id, :value => params[:user_id] %>
                 <!--三項演算子を使用。 :selectedには第一引数と連動したコードを渡す-->
                 <!--三項演算子の例-->
@@ -18,4 +18,3 @@
             <% end %>
         <%= link_to '戻る', skills_admin_index_path(user_id: params[:user_id]), class: 'text-black' %>
     </div>
-</div>

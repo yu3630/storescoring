@@ -1,4 +1,4 @@
 class Area < ApplicationRecord
-    has_many :users
-    has_many :stores
+  has_many :users
+  has_many :stores
 end

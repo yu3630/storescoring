@@ -3,6 +3,5 @@ class SkillsController < ApplicationController
     @skill = Skill.new
   end
 
-  def register_skill_user
-  end
+  def register_skill_user; end
 end
